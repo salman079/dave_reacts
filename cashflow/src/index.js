@@ -7,9 +7,6 @@ function App() {
   const [outflow, setOutflow] = React.useState(0);
   const [nature, setNature] = React.useState("");
   const [trsflow, setTrsflow] = React.useState([]);
-const[city, setCity] = React.useState();
-  // const [i, setI] = React.useState(0);
-  // const [balance, setBalance] = React.useState(0);
  
   const inputTxt = (e) => {
     setNature(e.target.value);
@@ -38,6 +35,7 @@ const[city, setCity] = React.useState();
     }
   }
   return (<>
+  <h1>Cash Flow</h1>
     Balance :SR {inflow+outflow} <br/> 
     Total Inflow :SR {inflow} <br />
     Total Outflow :SR {outflow} <br />

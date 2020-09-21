@@ -1,0 +1,14 @@
+.dark1 {
+    background-color: black;
+    color: white;
+  }
+  
+  .lit1 {
+    background-color: white;
+    color: black;
+  }
+  
+  html, body, #root,.room {
+  height: 100%;
+  margin: 0;
+  }

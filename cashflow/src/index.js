@@ -25,7 +25,7 @@ function App() {
     setCashflow(0);
   }
   const cashdflow = (e) => {
-    setTrsflow(trsflow.concat(nature));
+    setTrsflow(trsflow.concat(nature+" of SR "+CashFlow));
     console.log(trsflow);
     if (CashFlow > 0) {
       indflow();

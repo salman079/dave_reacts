@@ -7,7 +7,7 @@ function App() {
   const [outflow, setOutflow] = React.useState(0);
   const [nature, setNature] = React.useState("");
   const [trsflow, setTrsflow] = React.useState([]);
- 
+
   const inputTxt = (e) => {
     setNature(e.target.value);
   }
@@ -25,7 +25,8 @@ function App() {
     setCashflow(0);
   }
   const cashdflow = (e) => {
-    setTrsflow(trsflow.concat(nature+" of SR "+CashFlow));
+    e.preventDefault();
+    setTrsflow(trsflow.concat(nature + " of SR " + CashFlow));
     console.log(trsflow);
     if (CashFlow > 0) {
       indflow();
@@ -35,20 +36,22 @@ function App() {
     }
   }
   return (<>
-  <h1>Cash Flow</h1>
-    Balance :SR {inflow+outflow} <br/> 
+    <form onSubmit={cashdflow}>
+      <h1>Cash Flow</h1>
+    Balance :SR {inflow + outflow} <br />
     Total Inflow :SR {inflow} <br />
     Total Outflow :SR {outflow} <br />
-    <h1>Transaction History</h1><br/> <ul>{trsflow.map(city => <li key={city}>{city}</li>)}</ul> <br />
-    <h2>Add New Transaction</h2>
+      <h1>Transaction History</h1><br /> <ul>{trsflow.map(city => <li key={city}>{city}</li>)}</ul> <br />
+      <h2>Add New Transaction</h2>
     Amount <input type="number" placeholder="cash flow"
-      onChange={inputValue}
-      value={CashFlow}/> <br />
+        onChange={inputValue}
+        value={CashFlow} /> <br />
     Nature of transaction <input type="text" placeholder="Natrue of transaction"
-      onChange={inputTxt}
-      value={nature}/> <br />
-    <button onClick={cashdflow}>
-      Cashflows  </button><br />
+        onChange={inputTxt}
+        value={nature} /> <br />
+      <button type="submit" >
+        Cashflows  </button><br />
+    </form>
   </>
   )
 };

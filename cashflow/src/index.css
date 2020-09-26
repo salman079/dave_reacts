@@ -11,13 +11,22 @@ padding: 15px 15px;
 .header{
     text-align: center;
 }
+.balance{
+    line-height: 0px ;
+    text-align: center
+}
 .in-ex-container{
+    text-align: center;
     display: flex;
-    justify-content: space-around;
-    background-color: white;
+        margin: 0px 10px;
+  justify-content:space-around;
+     background-color: white;
 box-shadow: 0 0 10px gray;
 }
 
+.in-ex-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+  }
 .transaction-form{
     width: 100%;
     margin: 10px 0;
@@ -57,10 +66,30 @@ margin: 5px 0;
     color: seagreen;
     font-weight: bold;
   }
-  
   .outflow {
     color: tomato;
     font-weight: bold;
+  }
+  .list li.plus {
+    border-right: 5px solid seagreen;
+    color: seagreen
+  }
+  
+  .list li.plus:hover {
+    /* border-right: 5px solid #b6960a; */
+    background-color: seagreen;
+    color: #f7f7f7
+  }
+  
+  .list li.minus {
+    border-right: 5px solid tomato;
+    color: tomato;
+  }
+  
+  .list li.minus:hover {
+    /* border-right: 5px solid red; */
+    background-color: tomato;
+    color: #f7f7f7
   }
   
     

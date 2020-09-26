@@ -7,8 +7,7 @@ function App() {
   const [inflow, setInflow] = useState(0);
   const [outflow, setOutflow] = useState(0);
   const [nature, setNature] = useState("");
-  // const [trsflow, setTrsflow] = useState([]);
-  const [trsflow, setTrsflow] = useState([{ desc:'' , amount:0}]);
+  const [trsflow, setTrsflow] = useState([]);
 
   const inputTxt = (e) => {
     setNature(e.target.value);
@@ -28,7 +27,7 @@ function App() {
   }
   const cashdflow = (e) => {
     e.preventDefault();
-    setTrsflow(trsflow => [...trsflow, {desc: nature, amount: CashFlow}]);
+    setTrsflow(trsflow => [...trsflow, { id: new Date().getTime(), desc: nature, amount: CashFlow }]);
     if (CashFlow > 0) {
       indflow();
     }
@@ -38,11 +37,14 @@ function App() {
   }
   return (<>
     <div className="main-container">
-
-      <h1 className='header'>Cash Flow</h1>
-      <h3>Balance :SR {inflow + outflow}</h3> <br />
+      <h2 className='header'>Expense Tracker by Salman Siddiqui</h2>
+      <div className="balance">
+        <h3>Balance: <br /></h3>
+        <h2>SR {inflow + outflow}</h2> <br />
+      </div>
       <div className='in-ex-container'>
-        <h4>Total Inflow <br /><div className="inflow">
+        <h4>Total Inflow <br />
+        <div className="inflow">
           SR {inflow}
         </div>
         </h4>
@@ -57,8 +59,7 @@ function App() {
       <ul className="transaction-list">
         {trsflow.map((transaction, ind) => {
           return (
-            <li key={ind}>
-              {/* <span>{transaction}</span> */}
+            <li className="list" key={ind}>
               <span>{transaction.desc}</span>
               <span>{transaction.amount}</span>
             </li>)

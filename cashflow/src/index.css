@@ -1,0 +1,66 @@
+.main-container{
+max-width: 400px;
+min-height: 450px;
+margin: 0 auto;
+background-color: #efefef;
+box-shadow: 0 0 10px gray;
+margin-top: 25px;
+padding: 15px 15px;
+}
+
+.header{
+    text-align: center;
+}
+.in-ex-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+box-shadow: 0 0 10px gray;
+}
+
+.transaction-form{
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.transaction-list{
+    margin: 0;
+    padding: 0;
+}
+
+.transaction-list > li{
+display: flex;
+justify-content: space-between;
+background-color: white;
+box-shadow: 0 0 10px gray;
+padding: 10px 5px;
+margin: 5px 0;
+}
+.btn {
+    cursor: pointer;
+    background-color: lightsteelblue;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+  }
+  .btn:hover  {
+    background-color: steelblue;
+  }
+  .inflow {
+    color: seagreen;
+    font-weight: bold;
+  }
+  
+  .outflow {
+    color: tomato;
+    font-weight: bold;
+  }
+  
+    

@@ -1,0 +1,19 @@
+.off {
+    background-color: black;
+    color: white;
+}
+
+.low {
+    background-color: lightgrey;
+    color: black;
+}
+
+.medium {
+    background-color: gray;
+    color: white;
+}
+
+.high {
+    background-color: white;
+    color: black;
+}

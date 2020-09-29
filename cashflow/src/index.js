@@ -44,9 +44,9 @@ function App() {
       </div>
       <div className='in-ex-container'>
         <h4>Total Inflow <br />
-        <div className="inflow">
-          SR {inflow}
-        </div>
+          <div className="inflow">
+            SR {inflow}
+          </div>
         </h4>
         <h4>Total Outflow <br />
           <div className="outflow">

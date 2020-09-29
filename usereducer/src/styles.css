@@ -1,19 +1,98 @@
 .off {
     background-color: black;
     color: white;
-}
-
-.low {
-    background-color: lightgrey;
+  }
+  
+  .low {
+    background-color: pink;
     color: black;
-}
-
-.medium {
-    background-color: gray;
+  }
+  
+  .medium {
+    background-color: tomato;
     color: white;
-}
-
-.high {
-    background-color: white;
+  }
+  
+  .high {
+    background-color: aqua;
     color: black;
-}
+  }
+  
+  .abcdef {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    animation: blinkingBackground 2s infinite;
+  }
+  @keyframes blinkingBackground {
+    0% {
+      background-color: #10c018;
+    }
+    25% {
+      background-color: #1056c0;
+    }
+    50% {
+      background-color: #9b0aef;
+    }
+    75% {
+      background-color: #254878;
+    }
+    100% {
+      background-color: #04a1d5;
+    }
+  }
+  
+  .Wrong {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    animation: blinkingBackground1 2s infinite;
+  }
+  @keyframes blinkingBackground1 {
+    0% {
+      background-color: #f81010;
+    }
+    25% {
+      background-color: #f70c0c5e;
+    }
+    50% {
+      background-color: #ef0a1a;
+    }
+    75% {
+      background-color: #ff060636;
+    }
+    100% {
+      background-color: #f83a3a;
+    }
+  }
+  
+  .a,
+  .ab,
+  .abc,
+  .abcd,
+  .abcde 
+   {
+    color: #000;
+    font-weight: bold;
+    animation: blinkingText 2s infinite;
+  }
+  @keyframes blinkingText {
+    0% {
+      color: #10c018;
+    }
+    25% {
+      color: #1056c0;
+    }
+    50% {
+      color: #ef0a1a;
+    }
+    75% {
+      color: #254878;
+    }
+    100% {
+      color: #04a1d5;
+    }
+  }
+  

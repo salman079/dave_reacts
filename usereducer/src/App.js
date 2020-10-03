@@ -1,8 +1,5 @@
 import React from "react";
-
-
   const { useReducer } = React
-
   const reducer = (state, action) => {
     switch (action) {
       case 'INCREMENT':
